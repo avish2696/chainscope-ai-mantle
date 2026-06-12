@@ -174,7 +174,7 @@ export default function App() {
       if (!res.ok) throw new Error(`Backend returned ${res.status}`);
       const data = await res.json();
       clearInterval(timer);
-      setTimeout(() => { setResult(data); setStatus("result"); setTimeout(() => document.querySelector(".results")?.scrollIntoView({behavior:"smooth"}), 100); }, 3800);
+      setTimeout(() => { setResult(data); setStatus("result"); setTimeout(() => window.scrollTo({top: document.body.scrollHeight, behavior:"smooth"})); setTimeout(() => document.querySelector(".results")?.scrollIntoView({behavior:"smooth"}), 100); }, 3800);
     } catch (err) {
       clearInterval(timer);
       setTimeout(() => { setErrorMsg(err.message || "Unknown error"); setStatus("error"); }, 3800);
