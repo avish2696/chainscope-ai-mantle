@@ -2,8 +2,11 @@
 
 FastAPI backend for analyzing job contract addresses.
 
-## Deployed Contract
-`0x6758D4228f51EAcC011Bb986fccc1816838eb338`
+## Deployed Contracts
+
+**Mantle Sepolia:**
+- `0x6758D4228f51EAcC011Bb986fccc1816838eb338` (primary)
+- `0xb8dB8c1Bdb202B990c70732f1aa1653Cd929978B` (secondary)
 
 ## Structure
 - `/backend` - FastAPI application with `/analyze` endpoint
