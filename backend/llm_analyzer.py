@@ -25,8 +25,10 @@ Given Solidity source code, analyze it and respond with ONLY valid JSON (no mark
     {"severity": "High|Medium|Low", "issue": "short description of the issue"}
   ],
   "gas_insights": {
+    "average_gas": <realistic integer estimate based on contract complexity. Simple transfer/storage = 21000-50000, ERC20 = 50000-80000, Complex DeFi/Vault = 100000-200000>,
     "optimization_tip": "one concrete, specific suggestion based on the actual code"
   },
+  
   "risk_score": <integer 0-100, where 0 is very safe and 100 is very risky>
 }
 
