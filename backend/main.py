@@ -45,8 +45,9 @@ async def analyze_contract(data: AnalyzeRequest):
             "contract_type": llm_result.get("contract_type", "Unknown"),
             "description": llm_result.get("description", "")
         },
-        "gas_insights": llm_result.get("gas_insights", {}),
+        "gas_insights": {
+            **llm_result.get("gas_insights", {}),
+            "average_gas": 45000 },
         "security_flags": llm_result.get("security_flags", []),
         "risk_score": llm_result.get("risk_score", 50)
     }
-#Avishkar kumar
